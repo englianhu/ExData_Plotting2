@@ -25,7 +25,7 @@ colnames(SCC.sum) <- c('Year', 'Emissions')
 
 # Plot graph
 png(filename='plot4.png')
-ggplot(data=merge.sum, aes(x=Year, y=Emissions/1000)) + 
+ggplot(data=SCC.sum, aes(x=Year, y=Emissions/1000)) + 
     geom_line(aes(group=1, col=Emissions)) + geom_point(aes(size=2, col=Emissions)) + 
     ggtitle(expression('Total Emissions of PM'[2.5])) + 
     ylab(expression(paste('PM', ''[2.5], ' in kilotons'))) + 
