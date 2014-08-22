@@ -13,11 +13,11 @@ NEI <- readRDS("./data/summarySCC_PM25.rds")
 SCC <- readRDS("./data/Source_Classification_Code.rds")
 
 # Subset data
-MD <- subset(NEI, fips=='24510')
+BC <- subset(NEI, fips=='24510')
 
 # Plot graph
 png(filename='plot2.png')
-barplot(tapply(X=MD$Emissions, INDEX=MD$year, FUN=sum), 
+barplot(tapply(X=BC$Emissions, INDEX=BC$year, FUN=sum), 
         main='Total Emission in Baltimore City, MD', 
         xlab='Year', ylab=expression('PM'[2.5]))
 dev.off()
